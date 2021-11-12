@@ -1,0 +1,16 @@
+
+body {
+  background-repeat: no-repeat ;
+  background-size: cover;
+  background-color: rgb(33, 13, 105);
+}
+
+
+
+
+.mynetwork {
+  margin: 0px auto;
+  /* width: 650px; */
+  height: 500px;
+  border: 1px solid lightgray;
+}
