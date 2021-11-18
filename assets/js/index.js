@@ -1,5 +1,7 @@
-import { Formularios } from './formularios.js';
-import { LimpiarLocalStorage } from './funcionesFormularios.js';
+import { formCordenadas, formProductos } from './leerForm.js';
 
-LimpiarLocalStorage();
-Formularios();
+const cordenada = document.querySelector('#cordenadas');
+const productos = document.querySelector('#productos');
+
+cordenada.addEventListener('submit', formCordenadas);
+productos.addEventListener('submit', formProductos);
