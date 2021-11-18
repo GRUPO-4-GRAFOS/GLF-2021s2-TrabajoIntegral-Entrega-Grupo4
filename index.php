@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo Integral grafo</title>
   </head>
-  <body background= "./assets/img/mountains-the-game-lake-forest-wallpaper-preview.png";>
+  <body>
     <div class="container">
       <h1 class="text-center mt-3">Trabajo Integral Grafos</h1>
       <!-- Inicio Navbar -->
@@ -42,56 +42,39 @@
         </ul>
       </nav>
       <!-- fin Navbar -->
-      <!--Inicio row Instrucciones-->
+      <!--Row Formularios-->
+      <div class="row">
+        <!--Primer formulario-->
+        <div class="col-sm-12 col-md-6 mt-5">
+          <form class="formulario" id="cordenadas">
+            <h3 class="text-center">Cordenadas</h3>
+            <input type="file" class="form-control" id="inputCordenadas" />
+            <h5 class="mt-3">Contenido del archivo:</h5>
+            <ul id="listaCordenada" class="list-group mb-3"></ul>
+            <input
+              type="submit"
+              class="btn btn-dark"
+              value="subir archivo"
+            />
+          </form>
+        </div>
+        <!--Segundo formulario-->
+        <div class="col-sm-12 col-md-6 mt-5">
+          <form class="formulario" id="productos">
+            <h3 class="text-center">Productos</h3>
+            <input type="file" class="form-control" id="inputProductos" />
+            <h5 class="mt-3">Contenido del archivo:</h5>
+            <ul id="listaProductos" class="list-group mb-3"></ul>
+            <input
+              type="submit"
+              class="btn btn-dark"
+              value="subir archivo"
+            />
+          </form>
+        </div>
+      </div>
     </div>
     <!--Fin container-->
-<form>
-  <fieldset>
-  <h1 class="text-center mt-3">Ingreso de Datos</h1>
-  <h5 class="text-center mt-3">Datos para las rutas</h5>
-  <div>
-  <h3 class="">Datos Generales</h3>
-  <form name="formulario" method="post" action="/send.php" enctype="multipart/form-data">
-  <input type="file" name="adjunto" accept=".txt" multiple />
-</form>
-  <ul class="list">
-  <li><strong>Contenido del archivo:</strong></li>
-  <?php
-  $fp=fopen('coordenadas.txt','r');
-echo '<p>';
-while (!feof($fp)){
-    $cont=fgets($fp);
-    echo $cont;
-}
-echo '</p>';
-fclose($fp); 
-?>
-  </div>
-</fieldset>
-<input class="btn" type="submit" value="Darme de alta" />
-</form>
-
-                        <h3>Datos<br>Generales</h3>
-                        <input type="file" id="datosgen" class="button button-ps" />
-                        <ul class="list">
-                            <li><strong>Contenido del archivo:</strong></li>
-                            <li><pre id="contenido-archivogen"></pre></li>
-                        </ul>
-                    </div>
-                    <div class="span6 price-column">
-                        <h3>DATOS DEMANDA DE<br>PRODUCTOS DEL DÍA</h3>
-                        <input type="file" id="datoscpn" class="button button-ps" />
-                        <ul class="list">
-                            <li><strong>Contenido del archivo:</strong></li>
-                            <li><pre id="contenido-archivocpn"></pre></li>
-                        </ul>
-                        
-                    </div>
-                </div>
-                <div class="centered">
-                    <button class="button" type="button" id="finalizar"> Finalizar </button>
-                </div>
-            </div>
-        </div>
+    <script src="./assets/js/index.js" type="module"></script>
   </body>
 </html>

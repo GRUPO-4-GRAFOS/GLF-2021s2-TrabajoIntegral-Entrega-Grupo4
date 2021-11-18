@@ -1,14 +1,21 @@
-
 body {
-  background-repeat: no-repeat ;
+  background-image: url('../img/mountains-the-game-lake-forest-wallpaper-preview.png');
+  background-repeat: no-repeat;
   background-size: cover;
-  color:white;
+  color: white;
 }
 
+.formulario {
+  box-shadow: 0px 0px 3px #000;
+  color: black;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+}
 .mynetwork {
   margin: 0px auto;
   /* width: 650px; */
   height: 500px;
   border: 1px solid lightgray;
 }
-
