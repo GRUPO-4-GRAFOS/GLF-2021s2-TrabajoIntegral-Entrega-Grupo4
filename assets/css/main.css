@@ -2,10 +2,8 @@
 body {
   background-repeat: no-repeat ;
   background-size: cover;
+  color:white;
 }
-
-
-
 
 .mynetwork {
   margin: 0px auto;
@@ -13,3 +11,4 @@ body {
   height: 500px;
   border: 1px solid lightgray;
 }
+

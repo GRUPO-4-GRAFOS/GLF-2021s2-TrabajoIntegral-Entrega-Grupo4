@@ -45,5 +45,53 @@
       <!--Inicio row Instrucciones-->
     </div>
     <!--Fin container-->
+<form>
+  <fieldset>
+  <h1 class="text-center mt-3">Ingreso de Datos</h1>
+  <h5 class="text-center mt-3">Datos para las rutas</h5>
+  <div>
+  <h3 class="">Datos Generales</h3>
+  <form name="formulario" method="post" action="/send.php" enctype="multipart/form-data">
+  <input type="file" name="adjunto" accept=".txt" multiple />
+</form>
+  <ul class="list">
+  <li><strong>Contenido del archivo:</strong></li>
+  <?php
+  $fp=fopen('coordenadas.txt','r');
+echo '<p>';
+while (!feof($fp)){
+    $cont=fgets($fp);
+    echo $cont;
+}
+echo '</p>';
+fclose($fp); 
+?>
+  </div>
+</fieldset>
+<input class="btn" type="submit" value="Darme de alta" />
+</form>
+
+                        <h3>Datos<br>Generales</h3>
+                        <input type="file" id="datosgen" class="button button-ps" />
+                        <ul class="list">
+                            <li><strong>Contenido del archivo:</strong></li>
+                            <li><pre id="contenido-archivogen"></pre></li>
+                        </ul>
+                    </div>
+                    <div class="span6 price-column">
+                        <h3>DATOS DEMANDA DE<br>PRODUCTOS DEL DÍA</h3>
+                        <input type="file" id="datoscpn" class="button button-ps" />
+                        <ul class="list">
+                            <li><strong>Contenido del archivo:</strong></li>
+                            <li><pre id="contenido-archivocpn"></pre></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="centered">
+                    <button class="button" type="button" id="finalizar"> Finalizar </button>
+                </div>
+            </div>
+        </div>
   </body>
 </html>
