@@ -10,6 +10,7 @@ export const formCordenadas = e => {
   file.onload = ({ target }) => {
     contenido = target.result; //*leer todo el contenido del archivo
     arr = contenido.split('\r\n'); //*cortar las  lineas del archivo
+    localStorage.setItem('cordernadas', JSON.stringify(arr));
 
     //? ===========Recorrer arreglo e insertar datos en el html==============
     arr.forEach((element, i) => {
@@ -30,6 +31,7 @@ export const formProductos = e => {
   file.onload = ({ target }) => {
     contenido = target.result;
     arr = contenido.split('\r\n');
+    localStorage.setItem('productos', JSON.stringify(arr));
 
     arr.forEach((element, i) => {
       const hijo = document.createElement('li');

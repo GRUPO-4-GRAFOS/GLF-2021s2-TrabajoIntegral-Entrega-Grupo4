@@ -15,6 +15,7 @@
       href="./assets/img/UTEM.svg.png"
       type="image/x-icon"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.9.0/vis.min.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo Integral grafo</title>
@@ -44,8 +45,14 @@
         </ul>
       </nav>
       <!-- fin Navbar -->
+
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 mt-5">
+          <div class="mynetwork" id="mynetwork"></div>
+        </div>
+      </div>
       <!--Row Formularios-->
-      <div class="row">
+      <div class="row mb-5">
         <!--Primer formulario-->
         <div class="col-sm-12 col-md-6 mt-5">
           <form class="formulario" id="cordenadas">
@@ -84,5 +91,10 @@
     </div>
     <!--Fin container-->
     <script src="./assets/js/index.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <script src="./assets/js/ciudad.js"></script>
   </body>
 </html>
