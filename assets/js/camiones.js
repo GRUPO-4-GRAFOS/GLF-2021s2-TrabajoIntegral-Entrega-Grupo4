@@ -94,7 +94,7 @@ export function operator(distc, locale, info_agr2){
     console.log(coord);
     console.log(coordf);
     console.log(pdata);
-    console.log(cordenadas_puntos);
+    console.log(local_coord);
 
     for(let i = 0; i < Object.keys(coord).length; i++)
     {
@@ -194,10 +194,10 @@ export function operator(distc, locale, info_agr2){
                     Warn = `<br>`
                     info_msgs.innerHTML += Warn;
 
-                    x = cordenadas_puntos[i][cont];
-                    y = cordenadas_puntos[i][cont+1];
-                    x_1 = cordenadas_puntos[i+1][cont];
-                    y_1 = cordenadas_puntos[i+1][cont+1];
+                    x = local_coord[i][cont];
+                    y = local_coord[i][cont+1];
+                    x_1 = local_coord[i+1][cont];
+                    y_1 = local_coord[i+1][cont+1];
 
                     Aux_Coord = (distancia_x_y(x,y,x_1,y_1));
                     lngth_dne[i+1] = lngth[i] + Aux_Coord;
