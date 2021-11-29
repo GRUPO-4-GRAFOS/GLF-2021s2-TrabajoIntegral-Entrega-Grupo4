@@ -4,8 +4,8 @@ const file = new FileReader(); //*crear lector de archivo
 export const formCordenadas = e => {
   e.preventDefault();
   //? ====================Recibir parametros de HTML========================
-  inputFile = document.querySelector('#inputCordenadas').files[0];
-  parrafo = document.querySelector('#listaCordenada');
+  inputFile = document.querySelector('#agrfile').files[0];
+  parrafo = document.querySelector('#agrdata');
 
   file.onload = ({ target }) => {
     contenido = target.result; //*leer todo el contenido del archivo
@@ -24,8 +24,8 @@ export const formCordenadas = e => {
 
 export const formProductos = e => {
   e.preventDefault();
-  inputFile = document.querySelector('#inputProductos').files[0];
-  parrafo = document.querySelector('#listaProductos');
+  inputFile = document.querySelector('#agrfile2').files[0];
+  parrafo = document.querySelector('#agrdata2');
 
   file.onload = ({ target }) => {
     contenido = target.result;

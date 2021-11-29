@@ -18,6 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo Integral grafo</title>
+    
+    <script src="./assets/js/main.js" type="module"></script>
   </head>
   <body>
     <div class="container">
@@ -48,9 +50,9 @@
         <div class="col-sm-12 col-md-6 mt-5">
           <form class="formulario" id="cordenadas">
             <h3 class="text-center">Cordenadas</h3>
-            <input type="file" class="form-control" id="inputCordenadas" />
+            <input type="file" class="form-control" id="agrfile" />
             <h5 class="mt-3">Contenido del archivo:</h5>
-            <ul id="listaCordenada" class="list-group mb-3"></ul>
+            <ul id="agrdata" class="list-group mb-3"></ul>
             <input
               type="submit"
               class="btn btn-dark"
@@ -62,15 +64,21 @@
         <div class="col-sm-12 col-md-6 mt-5">
           <form class="formulario" id="productos">
             <h3 class="text-center">Productos</h3>
-            <input type="file" class="form-control" id="inputProductos" />
+            <input type="file" class="form-control" id="agrfile2" />
             <h5 class="mt-3">Contenido del archivo:</h5>
-            <ul id="listaProductos" class="list-group mb-3"></ul>
+            <ul id="agrdata2" class="list-group mb-3"></ul>
             <input
               type="submit"
               class="btn btn-dark"
               value="subir archivo"
             />
           </form>
+        </div>
+          <div class="centered">
+            <button class="button" type="button" id="Datos_Adicionales">Obtener Datos</button>
+          </div>    
+        <div class="scrsl">
+          <h3>Ejecución</h3>
         </div>
       </div>
     </div>
