@@ -13,9 +13,10 @@ body {
   border: 1px solid #eee;
   border-radius: 20px;
 }
+
 .mynetwork {
   margin: 0px auto;
-  /* width: 650px; */
-  height: 500px;
+  height: 700px;
   border: 1px solid lightgray;
+  background-color: white;
 }
