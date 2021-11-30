@@ -16,6 +16,7 @@
       type="image/x-icon"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.9.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Trabajo Integral grafo</title>
@@ -81,11 +82,11 @@
             />
           </form>
         </div>
-          <div class="centered">
-            <button class="button" type="button" id="Datos_Adicionales">Obtener Datos</button>
+          <div class="d-grid gap-2 my-3">
+            <button class="btn btn-primary" type="button" id="Datos_Adicionales">Obtener Datos</button>
           </div>    
-        <div class="scrsl">
-          <h3>Ejecución</h3>
+        <div class="scrsl col-12">
+          <h2 class="text-center">Ejecución</h2>
         </div>
       </div>
     </div>

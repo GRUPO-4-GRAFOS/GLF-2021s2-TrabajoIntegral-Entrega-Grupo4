@@ -1,7 +1,7 @@
 let inputFile, parrafo, contenido, arr;
 const file = new FileReader(); //*crear lector de archivo
 
-export const formCordenadas = e => {
+export const formCordenadas = (e, btn) => {
   e.preventDefault();
   //? ====================Recibir parametros de HTML========================
   inputFile = document.querySelector('#agrfile').files[0];
@@ -21,6 +21,7 @@ export const formCordenadas = e => {
     });
   };
   file.readAsText(inputFile); //*leer el archivo
+  btn.disable = true;
 };
 
 export const formProductos = e => {

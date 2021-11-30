@@ -20,3 +20,12 @@ body {
   border: 1px solid lightgray;
   background-color: white;
 }
+
+.scrsl {
+  background-color: white;
+  color: #000;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 50px;
+  font-weight: bold;
+}
