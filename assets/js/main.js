@@ -1,4 +1,4 @@
-import {operator} from './assets/js/camiones.js';
+import {operator} from './camiones.js';
 
 let var_c_p = []; //Arreglo de variables C y P
 let cant_c_p = []; //Arreglo para utilizar numeros asignados a C y P
@@ -171,14 +171,14 @@ function ObtenerAgr2(sample)
 function SepararAgr2()
 {
     let Claw = agr_text_2.split('\r\n'); //separa los datos por conjunto
-    let Aux_Size = Claw.length;
-
+    let Aux_Size, Aux_Size2, Aux_dato;
+    Aux_Size = Claw.length;
     console.log(Aux_Size);
     console.log(Claw);
     
     for(let i = 0; i < Aux_Size; i++){ //separa los datos
-        let Aux_dato = Claw[i].split(';');
-        let Aux_Size2 = Aux_dato.length; //revisar este punto en caso de problema//////////////////////////////////////////////////////////////
+        Aux_dato = Claw[i].split(';');
+        Aux_Size2 = Aux_dato.length; 
         Aux_dato[0] = parseInt(Aux_dato[0]);
         Aux_dato[1] = parseInt(Aux_dato[1]);
         Aux_dato[2] = parseInt(Aux_dato[2]);
