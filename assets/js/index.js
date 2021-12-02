@@ -1,7 +1,7 @@
-import { formCordenadas, formProductos } from './leerForm.js';
+import { formCoordenadas, formProductos } from './leerForm.js';
 
-const cordenada = document.querySelector('#cordenadas');
+const coordenada = document.querySelector('#coordenadas');
 const productos = document.querySelector('#productos');
 
-cordenada.addEventListener('submit', formCordenadas(e, cordenada));
+coordenada.addEventListener('submit', formCoordenadas);
 productos.addEventListener('submit', formProductos);

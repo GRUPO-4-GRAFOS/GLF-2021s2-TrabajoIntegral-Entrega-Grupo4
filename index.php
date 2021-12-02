@@ -56,8 +56,8 @@
       <div class="row mb-5">
         <!--Primer formulario-->
         <div class="col-sm-12 col-md-6 mt-5">
-          <form class="formulario" id="cordenadas">
-            <h3 class="text-center">Cordenadas</h3>
+          <form class="formulario" id="coordenadas">
+            <h3 class="text-center">Coordenadas</h3>
             <input type="file" class="form-control" id="agrfile" />
             <h5 class="mt-3">Contenido del archivo:</h5>
             <ul id="agrdata" class="list-group mb-3"></ul>

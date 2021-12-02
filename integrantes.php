@@ -57,8 +57,6 @@
     document.write("<br>");
     document.write('<h5 style="text-align: center;"> Rocio Leiva </h5>');
     document.write("<br>");
-    document.write('<h5 style="text-align: center;"> Paula Ruiz </h5>');
-    document.write("<br>");
     document.write('<h5 style="text-align: center;"> Victor Venegas </h5>');
 
 </script>
