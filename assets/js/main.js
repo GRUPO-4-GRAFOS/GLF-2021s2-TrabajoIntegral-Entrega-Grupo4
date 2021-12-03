@@ -1,5 +1,5 @@
 import { operator } from './camiones.js';
-import { peticionWarning } from './logs.js';
+import { peticionError, peticionInfo } from './logs.js';
 
 let var_c_p = []; //Arreglo de variables C y P
 let cant_c_p = []; //Arreglo para utilizar numeros asignados a C y P
@@ -309,19 +309,39 @@ function Despliegue() {
     info_msg = document.querySelector('.scrsl');
     Warn = `Parametros:<br>`;
     info_msg.innerHTML += Warn;
+
+    peticionInfo(
+      `[INFO] "Parámetros ingresados:"`
+    );
+
     for (let i = 0; i < datos_agr.length; i++) {
       info_msg = document.querySelector('.scrsl');
       Warn = datos_agr[i];
+
+      peticionInfo(
+        datos_agr[i]
+      );
+
       info_msg.innerHTML += Warn;
       Warn = `<br>`;
       info_msg.innerHTML += Warn;
     }
     Warn = `Datos de productos hoy:<br>`;
     info_msg.innerHTML += Warn;
+
+    peticionInfo(
+      `[INFO] "Productos hoy ingresados:"`
+    );
+
     for (let i = 0; i < datos_agr_2.length; i++) {
       info_msg = document.querySelector('.scrsl');
       Warn = datos_agr_2[i];
       info_msg.innerHTML += Warn;
+
+      peticionInfo(
+        datos_agr_2[i]
+      );
+
       Warn = `<br>`;
       info_msg.innerHTML += Warn;
     }
