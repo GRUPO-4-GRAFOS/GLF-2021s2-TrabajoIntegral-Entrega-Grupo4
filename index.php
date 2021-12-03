@@ -46,12 +46,6 @@
         </ul>
       </nav>
       <!-- fin Navbar -->
-
-      <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-10 mt-5">
-          <div class="mynetwork" id="mynetwork"></div>
-        </div>
-      </div>
       <!--Row Formularios-->
       <div class="row mb-5">
         <!--Primer formulario-->
