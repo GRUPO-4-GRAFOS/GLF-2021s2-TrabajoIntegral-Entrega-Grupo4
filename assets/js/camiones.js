@@ -90,6 +90,7 @@ export function operator(distc, locale, info_agr2) {
 
   for (let i = 0; i < Object.keys(coord).length; i++) {
     for (let j = 0; j < Object.keys(coord[i]).length; j++) {
+      console.log(Object.keys(coord).length);
       if (j == 0) {
         console.log(coord[i][j]);
         coordy[conty] = coordf[i][j] - coord[i][j];

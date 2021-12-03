@@ -6,7 +6,6 @@
   $formulario = json_decode(file_get_contents('php://input'), true); //? Recibir datos en php enviados desde js
   $directorio = '../logs';
   $path = '../logs/info.log';
-  $abecedario = 'abecedario';
   $estadoInicial = 'estadoInicial';
   
 
@@ -15,46 +14,8 @@
   }
 
   $log = new Log($path);
+  $log->writeline('INFO', $formulario['msg']);
+  $log->close();
+
   
-  if($formulario['pl']){
-    $mensaje = array(
-        'Datos del automata( ',
-        'El abecedario: ', implode(' ',$formulario[$abecedario]), 
-        ' El estado Inicial: ', $formulario[$estadoInicial],
-        ' El estados Automatas: ', implode(' ', $formulario['estadosAutomata']),
-        ' El estado final: ', implode(' ', $formulario['estadosFinales']),
-        ' El automata es: ','AP',
-        ')'
-    );
-    $log->writeline('Info', implode($mensaje));
-    $log->close();
-    
-  }
-  elseif($formulario['afd']){
-    $mensaje = array(
-        'Datos del automata( ',
-        'El abecedario: ', implode(' ',$formulario[$abecedario]), 
-        ' El estado Inicial: ', $formulario[$estadoInicial],
-        ' El estados Automatas: ', implode(' ', $formulario['estadosAutomata']),
-        ' El estado final: ', implode(' ', $formulario['estadosFinales']),
-        ' El automata es: ','AFD',
-        ')'
-    );
-    $log->writeline('Info', implode($mensaje));
-    $log->close();
-  }
-  else{
-    $mensaje = array(
-        'Transiciones del Automata(',
-        ' Estado base: ', $formulario[$estadoInicial],
-        ' Simbolo: ', $formulario['simbolo'],
-        ' Estado final: ', $formulario['estadoLlegada'],
-        ' Automata: ', $formulario['automata'],
-        ' )'
-    );
-    $log->writeline('Info', implode($mensaje));
-    $log->close();
-
-  }
-
 ?>
