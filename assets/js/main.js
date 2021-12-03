@@ -1,4 +1,5 @@
 import { operator } from './camiones.js';
+import { peticionWarning } from './logs.js';
 
 let var_c_p = []; //Arreglo de variables C y P
 let cant_c_p = []; //Arreglo para utilizar numeros asignados a C y P
@@ -93,26 +94,61 @@ function SepararAgr() {
       console.log('Se ingresaron datos de forma erronea.');
 
       Warn = `[ERROR] "Hay un dato mal ingresado en la línea: ${i + 1}" <br>`;
+
+      peticionError(
+        `[ERROR] "Hay un dato mal ingresado en la línea: ${i + 1}"`
+      );
+
       info_msg.innerHTML += Warn;
 
       if (Aux_Size2 > 3 || Aux_Size2 < 3) {
         Warn = `[ERROR] "Deben ingresarse 3 datos por cada fila" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Deben ingresarse 3 datos por cada fila"`
+        );
+
       } else if (Aux_dato[0] !== 'C' && Aux_dato[0] !== 'P') {
         Warn = `[ERROR] "Se deben ingresar datos "C" o "P" " <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Se deben ingresar datos "C" o "P" "`
+        );
+
       } else if (Aux_dato[1] <= 0) {
         Warn = `[ERROR] "Los valores de C y P deben ser enteros mayores a 0" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de C y P deben ser enteros mayores a 0"`
+        );
+
       } else if (Aux_dato[1] % 1 !== 0) {
         Warn = `[ERROR] "Los valores de C y P deben ser de tipo entero" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de C y P deben ser de tipo entero"`
+        );
+
       } else if (Aux_dato[2][0] % 1 !== 0 || Aux_dato[2][1] % 1 !== 0) {
         Warn = `[ERROR] "Las coordenadas deben ser ingresadas como valores de tipo entero" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Las coordenadas deben ser ingresadas como valores de tipo entero"`
+        );
+
       } else if (Aux_Coord > 2 || Aux_Coord < 2) {
         Warn = `[ERROR] "Las coordenadas deben ser valores para los ejes X,Y" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Las coordenadas deben ser valores para los ejes X,Y"`
+        );
+
       }
     }
     console.log(Aux_Size2);
@@ -183,30 +219,74 @@ function SepararAgr2() {
       Warn = `[ERROR] "Hay un dato mal ingresado en la línea: ${i + 1}" <br>`;
       info_msg.innerHTML += Warn;
 
+      peticionError(
+        `[ERROR] "Hay un dato mal ingresado en la línea: ${i + 1}"`
+      );
+
       if (Aux_Size2 > 3 || Aux_Size2 < 3) {
         Warn = `[ERROR] "Deben ingresarse 3 datos por cada fila" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Deben ingresarse 3 datos por cada fila"`
+        );
+
       } else if (Aux_dato[0] <= 0) {
         Warn = `[ERROR] "Los valores de C deben ser mayores a 0" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de C deben ser mayores a 0"`
+        );
+
       } else if (Aux_dato[0] % 1 !== 0) {
         Warn = `[ERROR] "Los valores de C deben ser de tipo entero" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de C deben ser de tipo entero"`
+        );
+
       } else if (Aux_dato[1] <= 0) {
         Warn = `[ERROR] "Los valores de P deben ser mayores a 0" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de P deben ser mayores a 0"`
+        );
+
       } else if (Aux_dato[1] % 1 !== 0) {
         Warn = `[ERROR] "Los valores de P deben ser de tipo entero" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "Los valores de P deben ser de tipo entero"`
+        );
+
       } else if (Aux_dato[2] > 1000) {
         Warn = `[ERROR] "No puede haber una cantidad de productos mayor a 1000 unidades" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "No puede haber una cantidad de productos mayor a 1000 unidades"`
+        );
+
       } else if (Aux_dato[2] < 0) {
         Warn = `[ERROR] "La cantidad de productos debe ser mayor a 0" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "La cantidad de productos debe ser mayor a 0"`
+        );
+
       } else if (Aux_dato[2] % 1 !== 0) {
         Warn = `[ERROR] "La cantidad de productos debe ingresarse como un valor de tipo entero" <br>`;
         info_msg.innerHTML += Warn;
+
+        peticionError(
+          `[ERROR] "La cantidad de productos debe ingresarse como un valor de tipo entero"`
+        );
+
       }
     }
     console.log(Aux_Size2);
