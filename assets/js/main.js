@@ -1,16 +1,16 @@
 import { operator } from './camiones.js';
-import { peticionError, peticionInfo, peticionWarning } from './logs.js';
+import { peticionError, peticionInfo } from './logs.js';
 
 let var_c_p = []; //Arreglo de variables C y P
-let cant_c_p = []; //Arreglo para utilizar numeros asignados a C y P
+const cant_c_p = []; //Arreglo para utilizar numeros asignados a C y P
 let var_coord = []; //Arreglo para las coordenadas
 let datos_agr = []; //Agrupación de los datos //primer Doc de texto
 let datos_agr_2 = []; //Arreglo para agrupar las variables C, P y N //segundo Doc de texto
 let dist_center = []; //Arreglo de centros de distribución
 let local_e = []; //Arreglo Locales de entrega
-var id_center = []; //Identificador para Centros de distribución
-var id_local_e = []; //Identificador para Locales de entrega
-var cantidad = []; //Arreglo para las variables de cantidad
+let id_center = []; //Identificador para Centros de distribución
+let id_local_e = []; //Identificador para Locales de entrega
+let cantidad = []; //Arreglo para las variables de cantidad
 let AUX_lenght; //Auxiliar designado para almacenar tamaños de forma temporal
 let Warn; // Variable designada para los mensajes de log
 let agr_text;
@@ -28,16 +28,16 @@ document
   .getElementById('agrfile2')
   .addEventListener('change', ObtenerAgr2, false);
 
-function ObtenerAgr(sample) {
-  let data_file = sample.target.files[0];
+function ObtenerAgr(file) {
+  let data_file = file.target.files[0];
   let Reader = new FileReader();
 
   if (!data_file) {
     return;
   }
 
-  Reader.onload = function (sample) {
-    agr_text = sample.target.result;
+  Reader.onload = function (file2) {
+    agr_text = file2.target.result;
     SepararAgr();
     VerAgr();
   };
@@ -141,8 +141,8 @@ function VerAgr() {
 }
 //////////////////////////////////////////////////////////Final Funciones Agr//////////////////////////////////////////////////////////////////////
 
-function ObtenerAgr2(sample) {
-  var data_file = sample.target.files[0];
+function ObtenerAgr2(file3) {
+  var data_file = file3.target.files[0];
 
   if (!data_file) {
     return;
@@ -150,8 +150,8 @@ function ObtenerAgr2(sample) {
 
   var Reader = new FileReader();
 
-  Reader.onload = function (sample) {
-    agr_text_2 = sample.target.result;
+  Reader.onload = function (file4) {
+    agr_text_2 = file4.target.result;
     SepararAgr2();
     VerAgr2();
   };
